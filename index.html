@@ -17,6 +17,11 @@
         .welcome-container {
             text-align: center;
         }
+        .welcome-container img {
+            max-width: 150px; /* Adjust the size of the logo */
+            height: auto;
+            margin-bottom: 20px; /* Space between the logo and the title */
+        }
         .welcome-container h1 {
             margin-bottom: 20px;
         }
@@ -36,9 +41,11 @@
 </head>
 <body>
     <div class="welcome-container">
-        <h1>Bienvenido al Mapa de Calor de Talcahuano</h1>
-        <p>Presione el botón para ver el mapa interactivo</p>
-        <button class="welcome-button" onclick="redirectToMap()">ir al mapa</button>
+        <!-- Add the logo image above the title -->
+        <img src="Picture1png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo -->
+        <h1>Resultado Taller Participativo: "Reflexionemos juntos sobre el Talcahuano que soñamos"</h1>
+        <p>Presione el botón para visualizar el mapa de calor interactivo</p>
+        <button class="welcome-button" onclick="redirectToMap()">Ir al mapa</button>
     </div>
 
     <script>
