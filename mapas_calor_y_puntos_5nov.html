@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e12e0aef0bb0297449728020ff243c25 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e12e0aef0bb0297449728020ff243c25" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e12e0aef0bb0297449728020ff243c25 = L.map(
+                "map_e12e0aef0bb0297449728020ff243c25",
+                {
+                    center: [-36.72589970289869, -73.11537324241982],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6c4b8a384e951ae23b9ef9fcff0be7db = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6c4b8a384e951ae23b9ef9fcff0be7db.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var heat_map_70e4d8964004ba71c128f764c2236dd7 = L.heatLayer(
+                [[-36.7306714859, -73.1053730893], [-36.7200599, -73.12128], [-36.7583114, -73.0915259], [-36.722836, -73.1084513], [-36.72521, -73.13202], [-36.7223648, -73.1206037], [-36.7148242, -73.1173726], [-36.73532, -73.11048], [-36.7212846, -73.1321688], [-36.7246524, -73.1162267], [-36.7251253, -73.1184305], [-36.7136212, -73.1131317], [-36.7247834, -73.1169808], [-36.7681896, -73.084547], [-36.7333019, -73.1114136]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_70e4d8964004ba71c128f764c2236dd7.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var heat_map_f3d616f042e23bd6c522b9cea02b0e5c = L.heatLayer(
+                [[-36.7238622893, -73.1433372406], [-36.7172592033, -73.1550124747], [-36.7144789938, -73.114099627], [-36.7228434392, -73.1437471825], [-36.7217849, -73.1220145], [-36.7417303, -73.1084025], [-36.7249317, -73.1215474], [-36.7247834, -73.1169808], [-36.7220607, -73.1213466], [-36.7247834, -73.1169808], [-36.7119978, -73.1431107], [-36.7401417, -73.1082041], [-36.7333718, -73.1149867], [-36.7483098, -73.1073678], [-36.7355421, -73.1113444], [-36.7117336, -73.1434198]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_f3d616f042e23bd6c522b9cea02b0e5c.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var heat_map_3bca0bb117e9236e77c269f3e79d7f2e = L.heatLayer(
+                [[-36.7072172653, -73.11863264], [-36.7154998645, -73.1194500236], [-36.7263276288, -73.1269273645], [-36.7328706448, -73.1104997864], [-36.7405290924, -73.1081295178], [-36.7141825, -73.1223172], [-36.7485496, -73.0900192], [-36.7247834, -73.1169808], [-36.7216846, -73.125796], [-36.7235142, -73.1310412], [-36.7235142, -73.1310412], [-36.7247834, -73.1169808], [-36.7236026, -73.1257674], [-36.7235142, -73.1310412], [-36.7084978, -73.1187774], [-36.7232483, -73.1236913], [-36.7150574, -73.1177258], [-36.7218631, -73.1262001], [-36.7327021, -73.1099376], [-36.7224661, -73.1264992], [-36.7329322, -73.1101518], [-36.715658, -73.1097423], [-36.723925, -73.1289173], [-36.7333538, -73.1096616], [-36.7247834, -73.1169808], [-36.7252813, -73.1296704], [-36.7247834, -73.1169808], [-36.7133441, -73.1154803], [-36.7168574, -73.1336812], [-36.7168574, -73.1336812], [-36.7139395, -73.1138226], [-36.7211731, -73.133105], [-36.7233868, -73.130797], [-36.7211731, -73.133105], [-36.7118012, -73.1144854], [-36.72013, -73.10868], [-36.7247834, -73.1169808], [-36.7247834, -73.1169808], [-36.7247834, -73.1169808], [-36.7215452, -73.1194926], [-36.7213088, -73.1180641], [-36.7366529, -73.1061382], [-36.7227412, -73.1248272], [-36.7334255, -73.1144063], [-36.7233283, -73.1078981], [-36.7099346, -73.1140653], [-36.7141539, -73.1160162], [-36.7145012, -73.1213941], [-36.7332101, -73.1110942], [-36.7127305, -73.1145141], [-36.7220236, -73.1192368], [-36.7081951, -73.1133532], [-36.7230128, -73.129221], [-36.714296, -73.1156192], [-36.720805, -73.1154824], [-36.7553188, -73.088521], [-36.7119978, -73.1431107], [-36.7247834, -73.1169808], [-36.7179271, -73.1183372], [-36.7247834, -73.1169808], [-36.7768965, -73.0797357], [-36.7247834, -73.1169808], [-36.7118012, -73.1144854], [-36.7401417, -73.1082041], [-36.7440084, -73.0975723], [-36.732346, -73.109206], [-36.7344551, -73.1133975], [-36.7382401, -73.1016406], [-36.7527951, -73.0920172], [-36.7566356, -73.0906769], [-36.7404844, -73.1182486], [-36.7130437, -73.1139515], [-36.7333019, -73.1114136], [-36.7085242, -73.1195186], [-36.7233218, -73.1362983], [-36.7247834, -73.1169808], [-36.7253, -73.117555], [-36.7218595, -73.1181681]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_3bca0bb117e9236e77c269f3e79d7f2e.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var heat_map_a083733acece5caf941cce0a70ab3389 = L.heatLayer(
+                [[-36.7140923306, -73.1138685607], [-36.726455948, -73.1130646597], [-36.63904926, -73.0927531287], [-36.7740184916, -73.0757158933], [-36.7551906766, -73.0917550422], [-36.7334008, -73.1090993], [-36.7226806, -73.1258094], [-36.7128844, -73.1141755], [-36.7235569, -73.1230027], [-36.710983, -73.1140944], [-36.7139395, -73.1138226], [-36.7320445, -73.1113455], [-36.7247834, -73.1169808], [-36.7247834, -73.1169808], [-36.772314, -73.0769215], [-36.7149144, -73.1136392], [-36.7130437, -73.1139515], [-36.7259769, -73.1173116], [-36.7260423, -73.1171997], [-36.7247834, -73.1169808], [-36.7127012, -73.1140318]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_a083733acece5caf941cce0a70ab3389.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var heat_map_29e590c2773737776a80d1f985a9456b = L.heatLayer(
+                [[-36.7214205647, -73.1272454221], [-36.732895263, -73.1104687219], [-36.7287959034, -73.1174137546], [-36.7293897087, -73.1177510592], [-36.6526411396, -73.1024668892], [-36.7236598796, -73.1308522617], [-36.7319766651, -73.1087622314], [-36.7342996, -73.1125543], [-36.71194, -73.1149176], [-36.71194, -73.1149176], [-36.7303, -73.11747], [-36.7329322, -73.1101518], [-36.7573663, -73.0903035], [-36.7245813, -73.1305882], [-36.7179271, -73.1183372], [-36.7228319, -73.1226284], [-36.7179271, -73.1183372], [-36.7247834, -73.1169808], [-36.7237317, -73.1307884], [-36.732346, -73.109206], [-36.73408, -73.10982], [-36.7126271, -73.1149291], [-36.7405688, -73.1078171], [-36.742387, -73.098404]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_29e590c2773737776a80d1f985a9456b.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_0673b8ce65625a640f6f122432ed2721 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_c71ddf1f4e257fc7f580b8e0f3bf18af = L.marker(
+                [-36.72731707367272, -73.10083875055507],
+                {}
+            ).addTo(marker_cluster_0673b8ce65625a640f6f122432ed2721);
+        
+    
+        var popup_411bf8f4a9a88a3f9cb2d1898c3a425c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e56b28d3dcff38371a0fdc9916338fe = $(`<div id="html_4e56b28d3dcff38371a0fdc9916338fe" style="width: 100.0%; height: 100.0%;">CONSERVACION INFRAESTRUCTURA PESQUERA CALETA ROCUANT</div>`)[0];
+                popup_411bf8f4a9a88a3f9cb2d1898c3a425c.setContent(html_4e56b28d3dcff38371a0fdc9916338fe);
+            
+        
+
+        marker_c71ddf1f4e257fc7f580b8e0f3bf18af.bindPopup(popup_411bf8f4a9a88a3f9cb2d1898c3a425c)
+        ;
+
+        
+    
+    
+            marker_cluster_0673b8ce65625a640f6f122432ed2721.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_07d5aaf0c61926e36416c270aa50b43b = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_ed2aa82759bbea0323c2899767bd141f = L.marker(
+                [-36.74301584953145, -73.08968744492232],
+                {}
+            ).addTo(marker_cluster_07d5aaf0c61926e36416c270aa50b43b);
+        
+    
+        var popup_bbf2c6f5d693423b0ac639342b3008fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_066dfb0ea4561006d5f12e869e014771 = $(`<div id="html_066dfb0ea4561006d5f12e869e014771" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO SISTEMA CANAL GAETE TALCAHUANO REGIÓN DEL BIOBÍO</div>`)[0];
+                popup_bbf2c6f5d693423b0ac639342b3008fd.setContent(html_066dfb0ea4561006d5f12e869e014771);
+            
+        
+
+        marker_ed2aa82759bbea0323c2899767bd141f.bindPopup(popup_bbf2c6f5d693423b0ac639342b3008fd)
+        ;
+
+        
+    
+    
+            marker_cluster_07d5aaf0c61926e36416c270aa50b43b.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_01dde53ad196dff8de813536c263e3d4 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_706f5610589510daa7c94ec8eb4041f8 = L.marker(
+                [-36.71442283653765, -73.13517640373918],
+                {}
+            ).addTo(marker_cluster_01dde53ad196dff8de813536c263e3d4);
+        
+    
+        var popup_848c6da61fd586bf984df4d6d6ee745e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0aecca3fcb33fb28f2dd3fa0dc243786 = $(`<div id="html_0aecca3fcb33fb28f2dd3fa0dc243786" style="width: 100.0%; height: 100.0%;">REPOSICION CENTRO DE SALUD FAMILIAR LOS CERROS COMUNA DE TALCAHUANO</div>`)[0];
+                popup_848c6da61fd586bf984df4d6d6ee745e.setContent(html_0aecca3fcb33fb28f2dd3fa0dc243786);
+            
+        
+
+        marker_706f5610589510daa7c94ec8eb4041f8.bindPopup(popup_848c6da61fd586bf984df4d6d6ee745e)
+        ;
+
+        
+    
+    
+            var marker_42d556909d686dab380bf12a12d3cfc8 = L.marker(
+                [-36.72294534510676, -73.1429896069227],
+                {}
+            ).addTo(marker_cluster_01dde53ad196dff8de813536c263e3d4);
+        
+    
+        var popup_9d9162592711497b46abcc7ae0bb967b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c45ab8d0a165cc552e86d9f0d6c7f75e = $(`<div id="html_c45ab8d0a165cc552e86d9f0d6c7f75e" style="width: 100.0%; height: 100.0%;">CONSERVACION INFRAESTRUCTURA CECOSF LOS LOBOS-LA GLORIA</div>`)[0];
+                popup_9d9162592711497b46abcc7ae0bb967b.setContent(html_c45ab8d0a165cc552e86d9f0d6c7f75e);
+            
+        
+
+        marker_42d556909d686dab380bf12a12d3cfc8.bindPopup(popup_9d9162592711497b46abcc7ae0bb967b)
+        ;
+
+        
+    
+    
+            marker_cluster_01dde53ad196dff8de813536c263e3d4.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_21099b0dc7f036757fd5faef649ace46 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_e6eb3298be84bbd91b592fb1760c6cac = L.marker(
+                [-36.7909557615505, -73.08676790141976],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_a1caf656d1432362568417274a08fefb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f91f7bec3620c2f89c68cad3aeec63fa = $(`<div id="html_f91f7bec3620c2f89c68cad3aeec63fa" style="width: 100.0%; height: 100.0%;">CONSTRUCCION CORREDOR TRANSP. PUBLICO COLON: PERALES - ALESSANDRI</div>`)[0];
+                popup_a1caf656d1432362568417274a08fefb.setContent(html_f91f7bec3620c2f89c68cad3aeec63fa);
+            
+        
+
+        marker_e6eb3298be84bbd91b592fb1760c6cac.bindPopup(popup_a1caf656d1432362568417274a08fefb)
+        ;
+
+        
+    
+    
+            var marker_f5cb7a16ee0a93185bb567794e54d704 = L.marker(
+                [-36.76758006937361, -73.07474647462081],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_f5ca85d7bd7d314dbb9567437270c7a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7e2c5d76c2520eccf72fefdb934972c = $(`<div id="html_e7e2c5d76c2520eccf72fefdb934972c" style="width: 100.0%; height: 100.0%;">CONSERVACION CAMINO A CARRIEL NORTE</div>`)[0];
+                popup_f5ca85d7bd7d314dbb9567437270c7a4.setContent(html_e7e2c5d76c2520eccf72fefdb934972c);
+            
+        
+
+        marker_f5cb7a16ee0a93185bb567794e54d704.bindPopup(popup_f5ca85d7bd7d314dbb9567437270c7a4)
+        ;
+
+        
+    
+    
+            var marker_ca81153227274f8ca7415cdf58e39788 = L.marker(
+                [-36.69711679672336, -73.10793269560955],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_f29ec16f635743d4227d9b2bbf007c9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c557f70800b2cf2c297f2aca7b676626 = $(`<div id="html_c557f70800b2cf2c297f2aca7b676626" style="width: 100.0%; height: 100.0%;">CONSERVACION PUNTO DE POSADA BASE NAVAL TALCAHUANO</div>`)[0];
+                popup_f29ec16f635743d4227d9b2bbf007c9d.setContent(html_c557f70800b2cf2c297f2aca7b676626);
+            
+        
+
+        marker_ca81153227274f8ca7415cdf58e39788.bindPopup(popup_f29ec16f635743d4227d9b2bbf007c9d)
+        ;
+
+        
+    
+    
+            var marker_509178b1c3b14ab935cdb3f941206e11 = L.marker(
+                [-36.722982783991334, -73.13438555199646],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_8f9f63c41153cf50b2c36ed0bc53ce71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac61483f49490c0c6fd768989e27d28c = $(`<div id="html_ac61483f49490c0c6fd768989e27d28c" style="width: 100.0%; height: 100.0%;">CONSTRUCCION TRANSPORTE MECANIZADO EN PENDIENTE PARA MONTE REDONDO Y LA GLORIA</div>`)[0];
+                popup_8f9f63c41153cf50b2c36ed0bc53ce71.setContent(html_ac61483f49490c0c6fd768989e27d28c);
+            
+        
+
+        marker_509178b1c3b14ab935cdb3f941206e11.bindPopup(popup_8f9f63c41153cf50b2c36ed0bc53ce71)
+        ;
+
+        
+    
+    
+            var marker_f5557b29226a74e0209bb41da20a0464 = L.marker(
+                [-36.77745412621355, -73.07882423993367],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_5adccd0e9e0204c23d18b3fdc4a6574b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac5822d802cb023ebf8bcdca79128b65 = $(`<div id="html_ac5822d802cb023ebf8bcdca79128b65" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO AUTOPISTA CONCEPCION TALCAHUANO</div>`)[0];
+                popup_5adccd0e9e0204c23d18b3fdc4a6574b.setContent(html_ac5822d802cb023ebf8bcdca79128b65);
+            
+        
+
+        marker_f5557b29226a74e0209bb41da20a0464.bindPopup(popup_5adccd0e9e0204c23d18b3fdc4a6574b)
+        ;
+
+        
+    
+    
+            var marker_cee4444ff14921663f72874d2e419c09 = L.marker(
+                [-36.775877214398605, -73.07982772927045],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_37042d563e81139931fe91db03445381 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20bcb3ef4622a5a2261d2a079d7ac9f5 = $(`<div id="html_20bcb3ef4622a5a2261d2a079d7ac9f5" style="width: 100.0%; height: 100.0%;">ELECTROCORREDOR AUTOPISTA CONCEPCION TALCAHUANO</div>`)[0];
+                popup_37042d563e81139931fe91db03445381.setContent(html_20bcb3ef4622a5a2261d2a079d7ac9f5);
+            
+        
+
+        marker_cee4444ff14921663f72874d2e419c09.bindPopup(popup_37042d563e81139931fe91db03445381)
+        ;
+
+        
+    
+    
+            var marker_e385946bd3baf9c0338c5162543a833e = L.marker(
+                [-36.77117515007769, -73.0857339807955],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_1bc1ef17d61265d7157460eeca9a3a7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_554f1b3feb483b4657b76a62fdd1882c = $(`<div id="html_554f1b3feb483b4657b76a62fdd1882c" style="width: 100.0%; height: 100.0%;">CORREDOR TRANSPORTE PUBLICO AVENIDA COLON</div>`)[0];
+                popup_1bc1ef17d61265d7157460eeca9a3a7c.setContent(html_554f1b3feb483b4657b76a62fdd1882c);
+            
+        
+
+        marker_e385946bd3baf9c0338c5162543a833e.bindPopup(popup_1bc1ef17d61265d7157460eeca9a3a7c)
+        ;
+
+        
+    
+    
+            var marker_c1f8adbc8ccfa23daaf8604fc18fb951 = L.marker(
+                [-36.72519791191463, -73.11692757275307],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_0e4c49c6aff438c510bb9bf169a107ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_692dd9bc5a770991554e65331c7dfe61 = $(`<div id="html_692dd9bc5a770991554e65331c7dfe61" style="width: 100.0%; height: 100.0%;">CONEXION FFCC EL ARENAL</div>`)[0];
+                popup_0e4c49c6aff438c510bb9bf169a107ab.setContent(html_692dd9bc5a770991554e65331c7dfe61);
+            
+        
+
+        marker_c1f8adbc8ccfa23daaf8604fc18fb951.bindPopup(popup_0e4c49c6aff438c510bb9bf169a107ab)
+        ;
+
+        
+    
+    
+            var marker_7ca0458e82e35f735ae645a25078f3a8 = L.marker(
+                [-36.731509911680384, -73.1089592426179],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_33828cf5ac1b49c8c2f4fcda81c131d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17d661ff7c68634a4fec548b2fe6bf21 = $(`<div id="html_17d661ff7c68634a4fec548b2fe6bf21" style="width: 100.0%; height: 100.0%;">HABILITACION CONEXION PUERTO SAN VICENTE RUTA INTERPORTUARIA</div>`)[0];
+                popup_33828cf5ac1b49c8c2f4fcda81c131d7.setContent(html_17d661ff7c68634a4fec548b2fe6bf21);
+            
+        
+
+        marker_7ca0458e82e35f735ae645a25078f3a8.bindPopup(popup_33828cf5ac1b49c8c2f4fcda81c131d7)
+        ;
+
+        
+    
+    
+            var marker_37957660d309837b81adee91b6a3b837 = L.marker(
+                [-36.7125713728097, -73.13418818020031],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_7f31fb6fc1d075429bbe77b96f57d90b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d4a672b37b03f2ee0fc248898d13810 = $(`<div id="html_7d4a672b37b03f2ee0fc248898d13810" style="width: 100.0%; height: 100.0%;">ESTUDIO PREFACTIBILIDAD TELEFERICO CERROS TALCAHUANO</div>`)[0];
+                popup_7f31fb6fc1d075429bbe77b96f57d90b.setContent(html_7d4a672b37b03f2ee0fc248898d13810);
+            
+        
+
+        marker_37957660d309837b81adee91b6a3b837.bindPopup(popup_7f31fb6fc1d075429bbe77b96f57d90b)
+        ;
+
+        
+    
+    
+            var marker_f647fc213aff009d1b7586a9542611e5 = L.marker(
+                [-36.76570240594625, -73.08600692989538],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_8dbc4e9bfd56dfed29a4cfa0aba33989 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff1a8a22c262382d422aa5046cc620db = $(`<div id="html_ff1a8a22c262382d422aa5046cc620db" style="width: 100.0%; height: 100.0%;">REPOSICION PUENTE PERALES</div>`)[0];
+                popup_8dbc4e9bfd56dfed29a4cfa0aba33989.setContent(html_ff1a8a22c262382d422aa5046cc620db);
+            
+        
+
+        marker_f647fc213aff009d1b7586a9542611e5.bindPopup(popup_8dbc4e9bfd56dfed29a4cfa0aba33989)
+        ;
+
+        
+    
+    
+            var marker_6956248423a3f472ed7dd7d48fee6a4d = L.marker(
+                [-36.71180446566028, -73.11473291152639],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_39b2975d71be4614dc82b37e67e6821a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fad460ce1039bf6294da6a71d6166974 = $(`<div id="html_fad460ce1039bf6294da6a71d6166974" style="width: 100.0%; height: 100.0%;">RECONSTRUCCION MERCADO TALCAHUANO</div>`)[0];
+                popup_39b2975d71be4614dc82b37e67e6821a.setContent(html_fad460ce1039bf6294da6a71d6166974);
+            
+        
+
+        marker_6956248423a3f472ed7dd7d48fee6a4d.bindPopup(popup_39b2975d71be4614dc82b37e67e6821a)
+        ;
+
+        
+    
+    
+            var marker_188d25fa4c4a4c5fbcc1c7f6271af821 = L.marker(
+                [-36.75718822899054, -73.09149343616649],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_77666995bb7707dcfd7d10bc6c3d77b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2e5eb6d85085fb4158d8a1e35be267c = $(`<div id="html_c2e5eb6d85085fb4158d8a1e35be267c" style="width: 100.0%; height: 100.0%;">CRUCE DESNIVELADO LOS CONDORES</div>`)[0];
+                popup_77666995bb7707dcfd7d10bc6c3d77b4.setContent(html_c2e5eb6d85085fb4158d8a1e35be267c);
+            
+        
+
+        marker_188d25fa4c4a4c5fbcc1c7f6271af821.bindPopup(popup_77666995bb7707dcfd7d10bc6c3d77b4)
+        ;
+
+        
+    
+    
+            var marker_18f387b5c3484aa250d56d9eed8830ea = L.marker(
+                [-36.72260819287714, -73.12915839346488],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_7f0d4f69573802c86c7220a2b198f837 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fce9f15392b5d3559679b070de239be5 = $(`<div id="html_fce9f15392b5d3559679b070de239be5" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO CALLE LATORRE</div>`)[0];
+                popup_7f0d4f69573802c86c7220a2b198f837.setContent(html_fce9f15392b5d3559679b070de239be5);
+            
+        
+
+        marker_18f387b5c3484aa250d56d9eed8830ea.bindPopup(popup_7f0d4f69573802c86c7220a2b198f837)
+        ;
+
+        
+    
+    
+            var marker_4feb8834442e2e729a4346d39cd5c276 = L.marker(
+                [-36.72015376117546, -73.11840117126984],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_13fe0329b8bf1725b5823c69e7c990a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba5907490f61df5f41ef756ffde1f701 = $(`<div id="html_ba5907490f61df5f41ef756ffde1f701" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO EJE VALDIVIA</div>`)[0];
+                popup_13fe0329b8bf1725b5823c69e7c990a5.setContent(html_ba5907490f61df5f41ef756ffde1f701);
+            
+        
+
+        marker_4feb8834442e2e729a4346d39cd5c276.bindPopup(popup_13fe0329b8bf1725b5823c69e7c990a5)
+        ;
+
+        
+    
+    
+            var marker_04a2ea2d74d1c5671d4595de3f754bb6 = L.marker(
+                [-36.68169830658566, -73.1171277146304],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_8e38181c0eb285368d083039ab1e50e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75c1e7363970282e7ffcf7abbf8ba5d2 = $(`<div id="html_75c1e7363970282e7ffcf7abbf8ba5d2" style="width: 100.0%; height: 100.0%;">PAVIMENTACION SECTOR LAS CANCHAS GUACOLDA INAQUEIPO</div>`)[0];
+                popup_8e38181c0eb285368d083039ab1e50e3.setContent(html_75c1e7363970282e7ffcf7abbf8ba5d2);
+            
+        
+
+        marker_04a2ea2d74d1c5671d4595de3f754bb6.bindPopup(popup_8e38181c0eb285368d083039ab1e50e3)
+        ;
+
+        
+    
+    
+            var marker_d9d66961b2f953fc5784a5c554d205ed = L.marker(
+                [-36.73245838113063, -73.10625892162378],
+                {}
+            ).addTo(marker_cluster_21099b0dc7f036757fd5faef649ace46);
+        
+    
+        var popup_9dbffe5d6239bd0e04b99201b6cab05e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2dce137665726590cf4642643428221e = $(`<div id="html_2dce137665726590cf4642643428221e" style="width: 100.0%; height: 100.0%;">EXTENSIÓN RUTA INTERPORTUARIA</div>`)[0];
+                popup_9dbffe5d6239bd0e04b99201b6cab05e.setContent(html_2dce137665726590cf4642643428221e);
+            
+        
+
+        marker_d9d66961b2f953fc5784a5c554d205ed.bindPopup(popup_9dbffe5d6239bd0e04b99201b6cab05e)
+        ;
+
+        
+    
+    
+            marker_cluster_21099b0dc7f036757fd5faef649ace46.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_0625ba1f1e60ded4a1c71a42553428c8 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_c5a250372b7bcab992a287b24ccd0f5e = L.marker(
+                [-36.77295911095102, -73.08941511506224],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_f8cdc64a6f33bc7b778c8809dc5418c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c39a4334a4ed406d3d3a80641786ba6 = $(`<div id="html_7c39a4334a4ed406d3d3a80641786ba6" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SEDE SOCIAL TIERRA PORTEÑA</div>`)[0];
+                popup_f8cdc64a6f33bc7b778c8809dc5418c1.setContent(html_7c39a4334a4ed406d3d3a80641786ba6);
+            
+        
+
+        marker_c5a250372b7bcab992a287b24ccd0f5e.bindPopup(popup_f8cdc64a6f33bc7b778c8809dc5418c1)
+        ;
+
+        
+    
+    
+            var marker_68d5dc7b55929cff75edb0b72b345d55 = L.marker(
+                [-36.72506438985693, -73.10910318600007],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_8f284b951b8f00444721d7d110fcd4fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9b27ac0af17efb84ef0166f2e56607d = $(`<div id="html_f9b27ac0af17efb84ef0166f2e56607d" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SEDE CLUB DEPORTIVO NUEVA ESTRELLA DE MAR</div>`)[0];
+                popup_8f284b951b8f00444721d7d110fcd4fb.setContent(html_f9b27ac0af17efb84ef0166f2e56607d);
+            
+        
+
+        marker_68d5dc7b55929cff75edb0b72b345d55.bindPopup(popup_8f284b951b8f00444721d7d110fcd4fb)
+        ;
+
+        
+    
+    
+            var marker_bc3c0450129050d052fcfb0d99dd46f3 = L.marker(
+                [-36.679387899886095, -73.11594116784647],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_6947b5d05eca13fc4fa96e6f2de9ff84 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fee307a512f201aae9e3713609dec59 = $(`<div id="html_3fee307a512f201aae9e3713609dec59" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SEDE CLUB DEPORTIVO LOS SOLITARIOS</div>`)[0];
+                popup_6947b5d05eca13fc4fa96e6f2de9ff84.setContent(html_3fee307a512f201aae9e3713609dec59);
+            
+        
+
+        marker_bc3c0450129050d052fcfb0d99dd46f3.bindPopup(popup_6947b5d05eca13fc4fa96e6f2de9ff84)
+        ;
+
+        
+    
+    
+            var marker_15acf2dcac33120f22a934acdab10d9f = L.marker(
+                [-36.74758659163, -73.10832562394685],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_0abcc4b1ba0f51f35c2b396181f0d2a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_904c2be800b4c88fa9aaf2e91c7069e5 = $(`<div id="html_904c2be800b4c88fa9aaf2e91c7069e5" style="width: 100.0%; height: 100.0%;">REPOSICION PLAZA JOSÉ DE SAN MARTÍN, VILLA PRESIDENTE RÍOS POBLACIÓN HIGUERAS,</div>`)[0];
+                popup_0abcc4b1ba0f51f35c2b396181f0d2a0.setContent(html_904c2be800b4c88fa9aaf2e91c7069e5);
+            
+        
+
+        marker_15acf2dcac33120f22a934acdab10d9f.bindPopup(popup_0abcc4b1ba0f51f35c2b396181f0d2a0)
+        ;
+
+        
+    
+    
+            var marker_578c3c8c868bf9bc190c6396564c2e97 = L.marker(
+                [-36.7183248384256, -73.11603765850701],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_5513bec20f4a7accb93d526bce2eb236 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a187753d8e5b557ab688cd5b9d9b76a4 = $(`<div id="html_a187753d8e5b557ab688cd5b9d9b76a4" style="width: 100.0%; height: 100.0%;">CONSERVACION MIRADOR SAN MARTÍN, CERRO DAVID FUENTES</div>`)[0];
+                popup_5513bec20f4a7accb93d526bce2eb236.setContent(html_a187753d8e5b557ab688cd5b9d9b76a4);
+            
+        
+
+        marker_578c3c8c868bf9bc190c6396564c2e97.bindPopup(popup_5513bec20f4a7accb93d526bce2eb236)
+        ;
+
+        
+    
+    
+            var marker_388c84d41aeba643faced26a94e8dc61 = L.marker(
+                [-36.747331681645804, -73.10762547639897],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_673553167214c96bf2de1b326a076d98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0cf1a5ee8dac8f1c344c9aaab7d1567 = $(`<div id="html_c0cf1a5ee8dac8f1c344c9aaab7d1567" style="width: 100.0%; height: 100.0%;">HABILITACION CANCHA PARA SKATEBOARD Y PATINAJE HIGUERAS</div>`)[0];
+                popup_673553167214c96bf2de1b326a076d98.setContent(html_c0cf1a5ee8dac8f1c344c9aaab7d1567);
+            
+        
+
+        marker_388c84d41aeba643faced26a94e8dc61.bindPopup(popup_673553167214c96bf2de1b326a076d98)
+        ;
+
+        
+    
+    
+            var marker_74a3b7aa0afc1db5c9353af245817779 = L.marker(
+                [-36.71755025875854, -73.14685450028075],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_ead4833566c03936a7af6ba7569096b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47425724d7e17402ca9bd4ba653a7ae9 = $(`<div id="html_47425724d7e17402ca9bd4ba653a7ae9" style="width: 100.0%; height: 100.0%;">CONSTRUCCION PLAZA ACCESIBLE SECTOR LOS COPIHUES</div>`)[0];
+                popup_ead4833566c03936a7af6ba7569096b7.setContent(html_47425724d7e17402ca9bd4ba653a7ae9);
+            
+        
+
+        marker_74a3b7aa0afc1db5c9353af245817779.bindPopup(popup_ead4833566c03936a7af6ba7569096b7)
+        ;
+
+        
+    
+    
+            var marker_2ef8d6b43f4f91c490d08920f759daaa = L.marker(
+                [-36.71774224014792, -73.14586015631835],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_fbaf5a630747917f68fda817ce53ecd2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b17a829adc0843f4d0a36d91c0675bbe = $(`<div id="html_b17a829adc0843f4d0a36d91c0675bbe" style="width: 100.0%; height: 100.0%;">REPOSICION PASTO SINTÉTICO MULTICANCHA LOS COPIHUES</div>`)[0];
+                popup_fbaf5a630747917f68fda817ce53ecd2.setContent(html_b17a829adc0843f4d0a36d91c0675bbe);
+            
+        
+
+        marker_2ef8d6b43f4f91c490d08920f759daaa.bindPopup(popup_fbaf5a630747917f68fda817ce53ecd2)
+        ;
+
+        
+    
+    
+            var marker_e0cb3c1b5388bb16d061d5571bcf868a = L.marker(
+                [-36.742962736648096, -73.10585215800917],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_eadebede29e418eafd4a9c2bd0d87469 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dba62d1b359c709b180f936bd00ae2ac = $(`<div id="html_dba62d1b359c709b180f936bd00ae2ac" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO BARRIO VILLA PARAISO</div>`)[0];
+                popup_eadebede29e418eafd4a9c2bd0d87469.setContent(html_dba62d1b359c709b180f936bd00ae2ac);
+            
+        
+
+        marker_e0cb3c1b5388bb16d061d5571bcf868a.bindPopup(popup_eadebede29e418eafd4a9c2bd0d87469)
+        ;
+
+        
+    
+    
+            var marker_c1225553c9a705c7435e25b31824c6e8 = L.marker(
+                [-36.752445378547826, -73.11032740139501],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_24f4023226f8a4c4ffeac1b63750ef16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b70b8e202bf26c7f4ba0de244466eeb4 = $(`<div id="html_b70b8e202bf26c7f4ba0de244466eeb4" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO BARRIO LORD COCHRANE</div>`)[0];
+                popup_24f4023226f8a4c4ffeac1b63750ef16.setContent(html_b70b8e202bf26c7f4ba0de244466eeb4);
+            
+        
+
+        marker_c1225553c9a705c7435e25b31824c6e8.bindPopup(popup_24f4023226f8a4c4ffeac1b63750ef16)
+        ;
+
+        
+    
+    
+            var marker_57695b8764b7f86ede9b7b5b37f6bca1 = L.marker(
+                [-36.72265083779937, -73.10504690129375],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_2da6e04bebe3afbfedc01a7802ab1e82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d07393bd97bcb42a0e69f687553e1c9b = $(`<div id="html_d07393bd97bcb42a0e69f687553e1c9b" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO PLAYA EL MORRO</div>`)[0];
+                popup_2da6e04bebe3afbfedc01a7802ab1e82.setContent(html_d07393bd97bcb42a0e69f687553e1c9b);
+            
+        
+
+        marker_57695b8764b7f86ede9b7b5b37f6bca1.bindPopup(popup_2da6e04bebe3afbfedc01a7802ab1e82)
+        ;
+
+        
+    
+    
+            var marker_15eb40f8901a38377cf1388aab87d2e6 = L.marker(
+                [-36.75570565045367, -73.09690416890905],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_182353d377820918258a6973e6fab293 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b10332bb1aa3f61424ac8f7adc842e0 = $(`<div id="html_3b10332bb1aa3f61424ac8f7adc842e0" style="width: 100.0%; height: 100.0%;">CONSTRUCCION CARPETA MULTIUSO PARQUE EL CHEQUEN</div>`)[0];
+                popup_182353d377820918258a6973e6fab293.setContent(html_3b10332bb1aa3f61424ac8f7adc842e0);
+            
+        
+
+        marker_15eb40f8901a38377cf1388aab87d2e6.bindPopup(popup_182353d377820918258a6973e6fab293)
+        ;
+
+        
+    
+    
+            var marker_73a200345ece41430232c980f2744b5b = L.marker(
+                [-36.71885794594252, -73.14123304843713],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_b17b95a70cfe41485f19a2db76e6a95f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_069432f7e1c28416d6b8d5ce6daa7723 = $(`<div id="html_069432f7e1c28416d6b8d5ce6daa7723" style="width: 100.0%; height: 100.0%;">REPARACION INTERIOR CENTRO COMUNITARIO MAHUIDA</div>`)[0];
+                popup_b17b95a70cfe41485f19a2db76e6a95f.setContent(html_069432f7e1c28416d6b8d5ce6daa7723);
+            
+        
+
+        marker_73a200345ece41430232c980f2744b5b.bindPopup(popup_b17b95a70cfe41485f19a2db76e6a95f)
+        ;
+
+        
+    
+    
+            var marker_833ef52136a9d4365c9a1d400df9ced9 = L.marker(
+                [-36.71245960987246, -73.13614028355884],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_79b256300eada46737b2f3ea1c282416 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6956da9d19ae0f87d3212889893caefc = $(`<div id="html_6956da9d19ae0f87d3212889893caefc" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO ESPACIO PUBLICO EJE SAN VICENTE DE TALCAHUANO</div>`)[0];
+                popup_79b256300eada46737b2f3ea1c282416.setContent(html_6956da9d19ae0f87d3212889893caefc);
+            
+        
+
+        marker_833ef52136a9d4365c9a1d400df9ced9.bindPopup(popup_79b256300eada46737b2f3ea1c282416)
+        ;
+
+        
+    
+    
+            var marker_0c0117ffb49b4226ddd8a87093a70c19 = L.marker(
+                [-36.77493284463968, -73.0987145199937],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_458801787f8208fd4979f73aace9a0a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf8cf3695cadeb7de659d001aa22ccf9 = $(`<div id="html_bf8cf3695cadeb7de659d001aa22ccf9" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO CANCHA DE FUTBOL DIEGO PORTALES</div>`)[0];
+                popup_458801787f8208fd4979f73aace9a0a0.setContent(html_bf8cf3695cadeb7de659d001aa22ccf9);
+            
+        
+
+        marker_0c0117ffb49b4226ddd8a87093a70c19.bindPopup(popup_458801787f8208fd4979f73aace9a0a0)
+        ;
+
+        
+    
+    
+            var marker_556767b96c23891b32c5e21188804740 = L.marker(
+                [-36.77656879124654, -73.10129094868178],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_3d1a42f4dd4880eed5517da3f508df1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15d4843b35ae4eb39e38d6afd5801d0c = $(`<div id="html_15d4843b35ae4eb39e38d6afd5801d0c" style="width: 100.0%; height: 100.0%;">REPARACION MULTICANCHA CASETAS CERRO EL GUINDO</div>`)[0];
+                popup_3d1a42f4dd4880eed5517da3f508df1e.setContent(html_15d4843b35ae4eb39e38d6afd5801d0c);
+            
+        
+
+        marker_556767b96c23891b32c5e21188804740.bindPopup(popup_3d1a42f4dd4880eed5517da3f508df1e)
+        ;
+
+        
+    
+    
+            var marker_da248e7cecf37c90703138ca0cb3a21c = L.marker(
+                [-36.713557688635554, -73.13814103749043],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_40d92ea2cf7f706b2c4133c9a380eed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c341531d61aa35c701a518d1cba7b9c9 = $(`<div id="html_c341531d61aa35c701a518d1cba7b9c9" style="width: 100.0%; height: 100.0%;">REPARACION MULTICANCHA VILLA BADARAN</div>`)[0];
+                popup_40d92ea2cf7f706b2c4133c9a380eed8.setContent(html_c341531d61aa35c701a518d1cba7b9c9);
+            
+        
+
+        marker_da248e7cecf37c90703138ca0cb3a21c.bindPopup(popup_40d92ea2cf7f706b2c4133c9a380eed8)
+        ;
+
+        
+    
+    
+            var marker_6d0f7a0b8a4c45899340dced894db80b = L.marker(
+                [-36.718204393334794, -73.14019019394554],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_6d5345ae14b6fb82cabbb130f77f1162 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8619ce2dc26c9421b03a55f3d82e9ec2 = $(`<div id="html_8619ce2dc26c9421b03a55f3d82e9ec2" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SEDE CLUB DEPORTIVO LOS LOBOS</div>`)[0];
+                popup_6d5345ae14b6fb82cabbb130f77f1162.setContent(html_8619ce2dc26c9421b03a55f3d82e9ec2);
+            
+        
+
+        marker_6d0f7a0b8a4c45899340dced894db80b.bindPopup(popup_6d5345ae14b6fb82cabbb130f77f1162)
+        ;
+
+        
+    
+    
+            var marker_cf78941c49d041ccd5ec8ff7b3e903ef = L.marker(
+                [-36.734121676329785, -73.11643648823058],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_5d4ee4b20ce2d4612762f05b275e1f39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a06f489fc05631b6746c81b0c44d7fa = $(`<div id="html_6a06f489fc05631b6746c81b0c44d7fa" style="width: 100.0%; height: 100.0%;">MEJORAMIENTO CANCHA DE FÚTBOL LIBERTAD</div>`)[0];
+                popup_5d4ee4b20ce2d4612762f05b275e1f39.setContent(html_6a06f489fc05631b6746c81b0c44d7fa);
+            
+        
+
+        marker_cf78941c49d041ccd5ec8ff7b3e903ef.bindPopup(popup_5d4ee4b20ce2d4612762f05b275e1f39)
+        ;
+
+        
+    
+    
+            var marker_202b95a483c702811fa0faf5537d4417 = L.marker(
+                [-36.740633192754416, -73.10181199176722],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_e2fd088077b586f7012cad290ac28a7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b5c6e9c0af5aacf3bc42ed53cfae5dd = $(`<div id="html_1b5c6e9c0af5aacf3bc42ed53cfae5dd" style="width: 100.0%; height: 100.0%;">CONSTRUCCION PLAZA PICAFLOR JUAN G. HUERTA</div>`)[0];
+                popup_e2fd088077b586f7012cad290ac28a7e.setContent(html_1b5c6e9c0af5aacf3bc42ed53cfae5dd);
+            
+        
+
+        marker_202b95a483c702811fa0faf5537d4417.bindPopup(popup_e2fd088077b586f7012cad290ac28a7e)
+        ;
+
+        
+    
+    
+            var marker_5f7ccfc0bc300abc80684ad0a608242c = L.marker(
+                [-36.760585798119045, -73.09763619298474],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_4165bacec0347e46074e44631cf6ce45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cbbb300cfb31ca8b099cc63050576ba4 = $(`<div id="html_cbbb300cfb31ca8b099cc63050576ba4" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SEDE SOCIAL JJ.VV. SAN CARLOS DE DINAHUE Y LAS AMAPOLAS</div>`)[0];
+                popup_4165bacec0347e46074e44631cf6ce45.setContent(html_cbbb300cfb31ca8b099cc63050576ba4);
+            
+        
+
+        marker_5f7ccfc0bc300abc80684ad0a608242c.bindPopup(popup_4165bacec0347e46074e44631cf6ce45)
+        ;
+
+        
+    
+    
+            var marker_fbb75e03626b89e96f41007c36b67245 = L.marker(
+                [-36.73337372044024, -73.11576269723098],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_572483427b50403ec087e8a85199b65c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d85caee7d816b7538a52cf1554f35e9 = $(`<div id="html_7d85caee7d816b7538a52cf1554f35e9" style="width: 100.0%; height: 100.0%;">CONSTRUCCION CUBIERTA CANCHA DE RAYUELA UNIÓN LIBERTAD, TALCAHUANO</div>`)[0];
+                popup_572483427b50403ec087e8a85199b65c.setContent(html_7d85caee7d816b7538a52cf1554f35e9);
+            
+        
+
+        marker_fbb75e03626b89e96f41007c36b67245.bindPopup(popup_572483427b50403ec087e8a85199b65c)
+        ;
+
+        
+    
+    
+            var marker_87394d1d3f62fdbf8375f7069168d80f = L.marker(
+                [-36.737376363244856, -73.11135711107293],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_e8d03986baed7584fd306fe959a7f7a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fbb3f9c5f93c52b4b3f577b87e4f7b5 = $(`<div id="html_8fbb3f9c5f93c52b4b3f577b87e4f7b5" style="width: 100.0%; height: 100.0%;">CONSTRUCCION PLAZA ACCESO LIBERTAD NORTE</div>`)[0];
+                popup_e8d03986baed7584fd306fe959a7f7a7.setContent(html_8fbb3f9c5f93c52b4b3f577b87e4f7b5);
+            
+        
+
+        marker_87394d1d3f62fdbf8375f7069168d80f.bindPopup(popup_e8d03986baed7584fd306fe959a7f7a7)
+        ;
+
+        
+    
+    
+            var marker_7a2e861e091b06f6f5b6b9ca373eed1a = L.marker(
+                [-36.75383913913646, -73.10802113159001],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_4a3b7d0b7c62f6bf2e35c215a3b19430 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_423f10e4610f22ba280b160af87446d0 = $(`<div id="html_423f10e4610f22ba280b160af87446d0" style="width: 100.0%; height: 100.0%;">CONSTRUCCION CARPETA MULTIUSO SECTOR LORD COCHRANE</div>`)[0];
+                popup_4a3b7d0b7c62f6bf2e35c215a3b19430.setContent(html_423f10e4610f22ba280b160af87446d0);
+            
+        
+
+        marker_7a2e861e091b06f6f5b6b9ca373eed1a.bindPopup(popup_4a3b7d0b7c62f6bf2e35c215a3b19430)
+        ;
+
+        
+    
+    
+            var marker_988a4a42b6b72282d94427ee47fafeb4 = L.marker(
+                [-36.708195012456514, -73.12923839736912],
+                {}
+            ).addTo(marker_cluster_0625ba1f1e60ded4a1c71a42553428c8);
+        
+    
+        var popup_8d9bc9550ed37db16652f7f3a9e0ce4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1d46bb3e5159bd78ab7a31d45910e91 = $(`<div id="html_d1d46bb3e5159bd78ab7a31d45910e91" style="width: 100.0%; height: 100.0%;">PROYECTO HABITACIONAL CENTINELA NUEVA VIDA Y ESPERANZA</div>`)[0];
+                popup_8d9bc9550ed37db16652f7f3a9e0ce4d.setContent(html_d1d46bb3e5159bd78ab7a31d45910e91);
+            
+        
+
+        marker_988a4a42b6b72282d94427ee47fafeb4.bindPopup(popup_8d9bc9550ed37db16652f7f3a9e0ce4d)
+        ;
+
+        
+    
+    
+            marker_cluster_0625ba1f1e60ded4a1c71a42553428c8.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var marker_cluster_9523610b390310673812576b27b70199 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_74a586c1038f336d099528330579c1d3 = L.marker(
+                [-36.71204148102155, -73.13638836674768],
+                {}
+            ).addTo(marker_cluster_9523610b390310673812576b27b70199);
+        
+    
+        var popup_8a6d705e4994fcab067229e7889649e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d8e47c1a1b8e58003c1ca9e9630ec20 = $(`<div id="html_9d8e47c1a1b8e58003c1ca9e9630ec20" style="width: 100.0%; height: 100.0%;">CONSTRUCCION SUBCOMISARÍA SOBERANÍA, COMUNA DE TALCAHUANO</div>`)[0];
+                popup_8a6d705e4994fcab067229e7889649e3.setContent(html_9d8e47c1a1b8e58003c1ca9e9630ec20);
+            
+        
+
+        marker_74a586c1038f336d099528330579c1d3.bindPopup(popup_8a6d705e4994fcab067229e7889649e3)
+        ;
+
+        
+    
+    
+            var marker_c1d6c35084495f2ef2779d57eecd466d = L.marker(
+                [-36.77611528782005, -73.08584391145142],
+                {}
+            ).addTo(marker_cluster_9523610b390310673812576b27b70199);
+        
+    
+        var popup_db30893c423ca9fce517d57cf0181206 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b86c3cda52ddc6055ec006f92e401ac = $(`<div id="html_4b86c3cda52ddc6055ec006f92e401ac" style="width: 100.0%; height: 100.0%;">REPOSICION CUARTEL 9ª COMPAÑIA DE BOMBEROS</div>`)[0];
+                popup_db30893c423ca9fce517d57cf0181206.setContent(html_4b86c3cda52ddc6055ec006f92e401ac);
+            
+        
+
+        marker_c1d6c35084495f2ef2779d57eecd466d.bindPopup(popup_db30893c423ca9fce517d57cf0181206)
+        ;
+
+        
+    
+    
+            marker_cluster_9523610b390310673812576b27b70199.addTo(map_e12e0aef0bb0297449728020ff243c25);
+        
+    
+            var layer_control_e3672db5b17a362e3f8dc8b30c3e1f85_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_6c4b8a384e951ae23b9ef9fcff0be7db,
+                },
+                overlays :  {
+                    "Problema - Medio Ambiente" : heat_map_70e4d8964004ba71c128f764c2236dd7,
+                    "Problema - Espacio publico" : heat_map_f3d616f042e23bd6c522b9cea02b0e5c,
+                    "Problema - Movilidad" : heat_map_3bca0bb117e9236e77c269f3e79d7f2e,
+                    "Problema - Economia local" : heat_map_a083733acece5caf941cce0a70ab3389,
+                    "Problema - Seguridad transito" : heat_map_29e590c2773737776a80d1f985a9456b,
+                    "Proyecto - Economia local" : marker_cluster_0673b8ce65625a640f6f122432ed2721,
+                    "Proyecto - Medio ambiente" : marker_cluster_07d5aaf0c61926e36416c270aa50b43b,
+                    "Proyecto - Salud" : marker_cluster_01dde53ad196dff8de813536c263e3d4,
+                    "Proyecto - Movilidad" : marker_cluster_21099b0dc7f036757fd5faef649ace46,
+                    "Proyecto - Espacio publico" : marker_cluster_0625ba1f1e60ded4a1c71a42553428c8,
+                    "Proyecto - Seguridad" : marker_cluster_9523610b390310673812576b27b70199,
+                },
+            };
+            let layer_control_e3672db5b17a362e3f8dc8b30c3e1f85 = L.control.layers(
+                layer_control_e3672db5b17a362e3f8dc8b30c3e1f85_layers.base_layers,
+                layer_control_e3672db5b17a362e3f8dc8b30c3e1f85_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_e12e0aef0bb0297449728020ff243c25);
+
+        
+</script>
+</html>
